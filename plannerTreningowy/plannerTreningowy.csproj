@@ -37,6 +37,7 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -61,6 +62,20 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="menuGlowne.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="menuGlowne.Designer.cs">
+      <DependentUpon>menuGlowne.cs</DependentUpon>
+    </Compile>
+    <Compile Include="plannerTreningowyData.cs">
+      <DependentUpon>plannerTreningowyData.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="plannerTreningowyData.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>plannerTreningowyData.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Rejestracja.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -78,6 +93,9 @@
     <EmbeddedResource Include="Logowanie.resx">
       <DependentUpon>Logowanie.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="menuGlowne.resx">
+      <DependentUpon>menuGlowne.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -91,6 +109,17 @@
     <EmbeddedResource Include="Rejestracja.resx">
       <DependentUpon>Rejestracja.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="plannerTreningowyData.xsc">
+      <DependentUpon>plannerTreningowyData.xsd</DependentUpon>
+    </None>
+    <None Include="plannerTreningowyData.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>plannerTreningowyData.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="plannerTreningowyData.xss">
+      <DependentUpon>plannerTreningowyData.xsd</DependentUpon>
+    </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -118,6 +147,11 @@
       <ProductName>.NET Framework 3.5 SP1</ProductName>
       <Install>false</Install>
     </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="plannerTreningowy.accdb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -16,7 +16,9 @@ namespace plannerTreningowy
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Logowanie());
+            var logowanie = new Logowanie();
+            logowanie.Show();
+            Application.Run();
         }
     }
 }
