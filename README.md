@@ -18,14 +18,15 @@ W dłuższej perspektywie aplikacja może generować przychody poprzez:
 ## Użyte Technologie
 - **Język programowania:** C#
 - **Framework:** WinForms
-- **Baza danych:** MySQL, Access
+- **Baza danych:** SQL, Access
 
 ## Lista Funkcjonalności
 1. **Rejestracja i logowanie użytkownika**  
    - Możliwość założenia konta i bezpiecznego logowania się do aplikacji.
 
 2. **Tworzenie planu treningowego**  
-   - Użytkownik może konfigurować własne plany, korzystając z gotowej biblioteki ćwiczeń ze wskazaną ilością serii, czasem przerwy pomiędzy seriami, liczbą powtórzeń.
+   - Użytkownik może konfigurować własne plany, korzystając z gotowej biblioteki ćwiczeń ze wskazaną ilością serii, liczbą powtórzeń.
+   - Opcja wyboru stopnia zaawansowania, od którego zależy czas między seriami oraz częstotliwość wykonywanych treningów.
    - Możliwość skorzystania z gotowych sugestii proponowanych przez aplikację.
 
 3. **Śledzenie postępów**  
@@ -63,6 +64,6 @@ Projekt został zaprojektowany zgodnie z zasadami **programowania obiektowego**:
 
 - **Hermetyzacja:** Prywatne pola i publiczne metody dostępu.
 - **Dziedziczenie:** Klasy bazowe i klasy dziedziczne dla różnych typów ćwiczeń i planów.
-- **Polimorfizm:** Wspólny interfejs dla różnych kategorii ćwiczeń.
+- **Polimorfizm:** Wspólny interfejs GUI dla różnych kategorii ćwiczeń.
 
 
