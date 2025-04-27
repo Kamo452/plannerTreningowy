@@ -8,7 +8,7 @@ Grupą docelową są osoby aktywne fizycznie, chcące poprawić swoją kondycję
 
 Planer treningowy będzie wykorzystany w konkretnym modelu biznesowym:
 - **Model B2C (Business-to-Consumer):**  
-  Aplikacja jest dostępna dla indywidualnych użytkowników jako darmowa lub płatna usługa (np. subskrypcje premium oferujące zaawansowane statystyki).
+  Aplikacja jest dostępna dla indywidualnych użytkowników jako darmowa usługa.
 
 W dłuższej perspektywie aplikacja może generować przychody poprzez:
 - Sprzedaż wersji premium,
@@ -18,14 +18,14 @@ W dłuższej perspektywie aplikacja może generować przychody poprzez:
 ## Użyte Technologie
 - **Język programowania:** C#
 - **Framework:** WinForms
-- **Baza danych:** MySQL
+- **Baza danych:** MySQL, Access
 
 ## Lista Funkcjonalności
 1. **Rejestracja i logowanie użytkownika**  
    - Możliwość założenia konta i bezpiecznego logowania się do aplikacji.
 
 2. **Tworzenie planu treningowego**  
-   - Użytkownik może tworzyć własne plany, dodając ćwiczenia z opisami, ilością serii, czasem przerwy pomiędzy seriami, liczbą powtórzeń i obciążeniem.
+   - Użytkownik może konfigurować własne plany, korzystając z gotowej biblioteki ćwiczeń ze wskazaną ilością serii, czasem przerwy pomiędzy seriami, liczbą powtórzeń.
    - Możliwość skorzystania z gotowych sugestii proponowanych przez aplikację.
 
 3. **Śledzenie postępów**  
@@ -59,10 +59,10 @@ dotnet run
 ---
 
 ## Opis Architektury
-Projekt został zaprojektowany zgodnie z zasadami **programowania obiektowego (OOP)**:
+Projekt został zaprojektowany zgodnie z zasadami **programowania obiektowego**:
 
 - **Hermetyzacja:** Prywatne pola i publiczne metody dostępu.
-- **Dziedziczenie:** Klasy bazowe i klasy pochodne dla różnych typów ćwiczeń i planów.
+- **Dziedziczenie:** Klasy bazowe i klasy dziedziczne dla różnych typów ćwiczeń i planów.
 - **Polimorfizm:** Wspólny interfejs dla różnych kategorii ćwiczeń.
 
 
