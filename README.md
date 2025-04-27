@@ -58,56 +58,6 @@ dotnet run
 
 ---
 
-## Problemy i Najczęstsze Błędy
-
-### 1. Brak zainstalowanego .NET SDK
-**Objaw:**  
-`dotnet: command not found`
-
-**Rozwiązanie:**  
-Zainstaluj .NET SDK z [https://dotnet.microsoft.com/download](https://dotnet.microsoft.com/download).  
-Sprawdź wersję:
-```bash
-dotnet --version
-```
-
----
-
-### 2. Nieprawidłowy Target Framework
-**Objaw:**  
-`The project targets 'net8.0', but the installed .NET SDK does not support that target.`
-
-**Rozwiązanie:**  
-Upewnij się, że projekt ma ustawiony:
-```xml
-<TargetFramework>net8.0-windows</TargetFramework>
-```
-i masz zainstalowaną odpowiednią wersję SDK.
-
----
-
-### 3. Brak obsługi Windows Forms
-**Objaw:**  
-Brak okna po uruchomieniu lub błąd budowania.
-
-**Rozwiązanie:**  
-Sprawdź w pliku `.csproj`:
-```xml
-<UseWindowsForms>true</UseWindowsForms>
-```
-lub doinstaluj w Visual Studio komponent **Desktop Development with C#**.
-
----
-
-### 4. Brak pliku `.sln`
-**Objaw:**  
-Visual Studio nie widzi projektu.
-
-**Rozwiązanie:**  
-Otwórz bezpośrednio plik `.csproj`, Visual Studio automatycznie utworzy rozwiązanie.
-
----
-
 ## Opis Architektury
 Projekt został zaprojektowany zgodnie z zasadami **programowania obiektowego (OOP)**:
 
