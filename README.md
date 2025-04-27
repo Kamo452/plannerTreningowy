@@ -1,1 +1,118 @@
-# plannerTreningowy
+
+# Planer Treningowy
+
+## Temat i Cel Biznesowy
+Aplikacja **Planer Treningowy** została stworzona w celu umożliwienia użytkownikom planowania, śledzenia i analizowania swoich treningów.  
+Dzięki aplikacji użytkownik może łatwiej realizować swoje cele fitnessowe, monitorować postępy i dostosowywać plany treningowe do własnych potrzeb.  
+Grupą docelową są osoby aktywne fizycznie, chcące poprawić swoją kondycję i sprawność fizyczną.
+
+Planer treningowy będzie wykorzystany w konkretnym modelu biznesowym:
+- **Model B2C (Business-to-Consumer):**  
+  Aplikacja jest dostępna dla indywidualnych użytkowników jako darmowa lub płatna usługa (np. subskrypcje premium oferujące zaawansowane statystyki).
+
+W dłuższej perspektywie aplikacja może generować przychody poprzez:
+- Sprzedaż wersji premium,
+- Reklamy partnerskie,
+- Współpracę z trenerami, dietetykami i influencerami.
+
+## Użyte Technologie
+- **Język programowania:** C#
+- **Framework:** WinForms
+- **Baza danych:** MySQL
+
+## Lista Funkcjonalności
+1. **Rejestracja i logowanie użytkownika**  
+   - Możliwość założenia konta i bezpiecznego logowania się do aplikacji.
+
+2. **Tworzenie planu treningowego**  
+   - Użytkownik może tworzyć własne plany, dodając ćwiczenia z opisami, ilością serii, czasem przerwy pomiędzy seriami, liczbą powtórzeń i obciążeniem.
+   - Możliwość skorzystania z gotowych sugestii proponowanych przez aplikację.
+
+3. **Śledzenie postępów**  
+   - System zapisuje wykonane treningi i umożliwia analizę progresu w czasie.
+   - Użytkownik otrzymuje motywacyjne nagrody, np. medal po ukończeniu treningu.
+
+## Instalacja i Uruchomienie
+
+### Wymagania
+- .NET SDK 8.0 lub wyższy
+- Windows 10/11
+- (opcjonalnie) Visual Studio 2022/2023 z dodatkiem "Desktop Development with C#"
+
+### Instrukcja instalacji:
+```bash
+# Klonowanie repozytorium
+git clone https://github.com/Kamo452/PlannerTreningowy
+
+# Przejście do katalogu
+cd PlannerTreningowy
+
+# Uruchomienie aplikacji
+dotnet run
+```
+
+### Uruchomienie przez Visual Studio:
+1. Otwórz plik `.sln` (jeśli istnieje) lub `.csproj` w Visual Studio.
+2. Wybierz tryb uruchomienia jako **Windows Application**.
+3. Kliknij **Start (F5)**.
+
+---
+
+## Problemy i Najczęstsze Błędy
+
+### 1. Brak zainstalowanego .NET SDK
+**Objaw:**  
+`dotnet: command not found`
+
+**Rozwiązanie:**  
+Zainstaluj .NET SDK z [https://dotnet.microsoft.com/download](https://dotnet.microsoft.com/download).  
+Sprawdź wersję:
+```bash
+dotnet --version
+```
+
+---
+
+### 2. Nieprawidłowy Target Framework
+**Objaw:**  
+`The project targets 'net8.0', but the installed .NET SDK does not support that target.`
+
+**Rozwiązanie:**  
+Upewnij się, że projekt ma ustawiony:
+```xml
+<TargetFramework>net8.0-windows</TargetFramework>
+```
+i masz zainstalowaną odpowiednią wersję SDK.
+
+---
+
+### 3. Brak obsługi Windows Forms
+**Objaw:**  
+Brak okna po uruchomieniu lub błąd budowania.
+
+**Rozwiązanie:**  
+Sprawdź w pliku `.csproj`:
+```xml
+<UseWindowsForms>true</UseWindowsForms>
+```
+lub doinstaluj w Visual Studio komponent **Desktop Development with C#**.
+
+---
+
+### 4. Brak pliku `.sln`
+**Objaw:**  
+Visual Studio nie widzi projektu.
+
+**Rozwiązanie:**  
+Otwórz bezpośrednio plik `.csproj`, Visual Studio automatycznie utworzy rozwiązanie.
+
+---
+
+## Opis Architektury
+Projekt został zaprojektowany zgodnie z zasadami **programowania obiektowego (OOP)**:
+
+- **Hermetyzacja:** Prywatne pola i publiczne metody dostępu.
+- **Dziedziczenie:** Klasy bazowe i klasy pochodne dla różnych typów ćwiczeń i planów.
+- **Polimorfizm:** Wspólny interfejs dla różnych kategorii ćwiczeń.
+
+
