@@ -2,74 +2,105 @@
 {
     partial class menuGlowne
     {
-        /// <summary>
-        /// Required designer variable.
-        /// </summary>
         private System.ComponentModel.IContainer components = null;
+        private System.Windows.Forms.Label lblWelcome;
+        private System.Windows.Forms.Button btnCardio;
+        private System.Windows.Forms.Button btnStrength;
+        private System.Windows.Forms.Button btnStats;
+        private System.Windows.Forms.Button btnLogout;
+        private System.Windows.Forms.FlowLayoutPanel flowPanel;
 
-        /// <summary>
-        /// Clean up any resources being used.
-        /// </summary>
-        /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
         protected override void Dispose(bool disposing)
         {
             if (disposing && (components != null))
-            {
                 components.Dispose();
-            }
             base.Dispose(disposing);
         }
 
-        #region Windows Form Designer generated code
-
-        /// <summary>
-        /// Required method for Designer support - do not modify
-        /// the contents of this method with the code editor.
-        /// </summary>
         private void InitializeComponent()
         {
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
+            this.lblWelcome = new System.Windows.Forms.Label();
+            this.btnCardio = new System.Windows.Forms.Button();
+            this.btnStrength = new System.Windows.Forms.Button();
+            this.btnStats = new System.Windows.Forms.Button();
+            this.btnLogout = new System.Windows.Forms.Button();
+            this.flowPanel = new System.Windows.Forms.FlowLayoutPanel();
             this.SuspendLayout();
             // 
-            // label1
+            // lblWelcome
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(329, 111);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(111, 16);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Witaj użytkowniku";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
+            this.lblWelcome.AutoSize = true;
+            this.lblWelcome.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
+            this.lblWelcome.Location = new System.Drawing.Point(20, 20);
+            this.lblWelcome.Name = "lblWelcome";
+            this.lblWelcome.Size = new System.Drawing.Size(90, 28);
+            this.lblWelcome.TabIndex = 0;
+            this.lblWelcome.Text = "Witaj, ...";
             // 
-            // label2
+            // btnCardio
             // 
-            this.label2.AutoSize = true;
-            this.label2.BackColor = System.Drawing.Color.Lime;
-            this.label2.Font = new System.Drawing.Font("Monotype Corsiva", 24F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(209, 163);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(366, 49);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "Pomyślnie zalogowano";
+            this.btnCardio.Location = new System.Drawing.Point(25, 60);
+            this.btnCardio.Name = "btnCardio";
+            this.btnCardio.Size = new System.Drawing.Size(120, 35);
+            this.btnCardio.TabIndex = 1;
+            this.btnCardio.Text = "Cardio";
+            this.btnCardio.UseVisualStyleBackColor = true;
+            this.btnCardio.Click += new System.EventHandler(this.btnCardio_Click);
+            // 
+            // btnStrength
+            // 
+            this.btnStrength.Location = new System.Drawing.Point(155, 60);
+            this.btnStrength.Name = "btnStrength";
+            this.btnStrength.Size = new System.Drawing.Size(120, 35);
+            this.btnStrength.TabIndex = 2;
+            this.btnStrength.Text = "Siłowe";
+            this.btnStrength.UseVisualStyleBackColor = true;
+            this.btnStrength.Click += new System.EventHandler(this.btnStrength_Click);
+            // 
+            // btnStats
+            // 
+            this.btnStats.Location = new System.Drawing.Point(285, 60);
+            this.btnStats.Name = "btnStats";
+            this.btnStats.Size = new System.Drawing.Size(120, 35);
+            this.btnStats.TabIndex = 3;
+            this.btnStats.Text = "Statystyki";
+            this.btnStats.UseVisualStyleBackColor = true;
+            this.btnStats.Click += new System.EventHandler(this.btnStats_Click);
+            // 
+            // btnLogout
+            // 
+            this.btnLogout.Location = new System.Drawing.Point(640, 20);
+            this.btnLogout.Name = "btnLogout";
+            this.btnLogout.Size = new System.Drawing.Size(90, 28);
+            this.btnLogout.TabIndex = 4;
+            this.btnLogout.Text = "Wyloguj";
+            this.btnLogout.UseVisualStyleBackColor = true;
+            this.btnLogout.Click += new System.EventHandler(this.btnLogout_Click);
+            // 
+            // flowPanel
+            // 
+            this.flowPanel.AutoScroll = true;
+            this.flowPanel.Location = new System.Drawing.Point(25, 110);
+            this.flowPanel.Name = "flowPanel";
+            this.flowPanel.Size = new System.Drawing.Size(705, 320);
+            this.flowPanel.TabIndex = 5;
             // 
             // menuGlowne
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
+            this.ClientSize = new System.Drawing.Size(784, 461);
+            this.Controls.Add(this.flowPanel);
+            this.Controls.Add(this.btnLogout);
+            this.Controls.Add(this.btnStats);
+            this.Controls.Add(this.btnStrength);
+            this.Controls.Add(this.btnCardio);
+            this.Controls.Add(this.lblWelcome);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.MaximizeBox = false;
             this.Name = "menuGlowne";
-            this.Text = "menuGlowne";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Menu główne";
             this.ResumeLayout(false);
             this.PerformLayout();
-
         }
-
-        #endregion
-
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
     }
 }
