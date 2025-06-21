@@ -1,10 +1,8 @@
+## Planer Treningowy
 
-# Planer Treningowy
-
-## Temat i Cel Biznesowy
-Aplikacja **Planer Treningowy** została stworzona w celu umożliwienia użytkownikom planowania, śledzenia i analizowania swoich treningów.  
-Dzięki aplikacji użytkownik może łatwiej realizować swoje cele fitnessowe, monitorować postępy i dostosowywać plany treningowe do własnych potrzeb.  
-Grupą docelową są osoby aktywne fizycznie, chcące poprawić swoją kondycję i sprawność fizyczną.
+### Temat i Cel Biznesowy
+Aplikacja **Planer Treningowy** została stworzona w celu umożliwości użytkowikom prostego tworzenia i zarządzania planami treningowymi. Dzięki aplikacji użytkownik może zarejestrować konto, zalogować się, wybrać ćwiczenia z gotowej bazy i zbudować spersonalizowany plan treningowy. Głównym celem aplikacji jest motywowanie do aktywności fizycznej poprzez uproszczenie procesu planowania oraz monitorowanie spalonych kalorii.
+Grupą docelową są osoby początkujące i średniozaawansowane, które chcą mieć pod ręką przejrzyste narzędzie do zarządzania swoim treningiem.
 
 Planer treningowy będzie wykorzystany w konkretnym modelu biznesowym:
 - **Model B2C (Business-to-Consumer):**  
@@ -15,55 +13,65 @@ W dłuższej perspektywie aplikacja może generować przychody poprzez:
 - Reklamy partnerskie,
 - Współpracę z trenerami, dietetykami i influencerami.
 
+---
+
 ## Użyte Technologie
-- **Język programowania:** C#
-- **Framework:** WinForms
-- **Baza danych:** SQL, Access
+- **Język programowania**: C#
+- **Framework**: WinForms (.NET 8.0)
+- **Baza danych**: Microsoft Access (`.accdb`)
 
-## Lista Funkcjonalności
-1. **Rejestracja i logowanie użytkownika**  
-   - Możliwość założenia konta i bezpiecznego logowania się do aplikacji.
+---
 
-2. **Tworzenie planu treningowego**  
-   - Użytkownik może konfigurować własne plany, korzystając z gotowej biblioteki ćwiczeń ze wskazaną ilością serii, liczbą powtórzeń.
-   - Opcja wyboru stopnia zaawansowania, od którego zależy czas między seriami oraz częstotliwość wykonywanych treningów.
-   - Możliwość skorzystania z gotowych sugestii proponowanych przez aplikację.
+## Lista Funkcjonalności:
 
-3. **Śledzenie postępów**  
-   - System zapisuje wykonane treningi i umożliwia analizę progresu w czasie.
-   - Użytkownik otrzymuje motywacyjne nagrody, np. medal po ukończeniu treningu.
+### Rejestracja i logowanie użytkownika
+- Rejestracja z walidacją unikalności loginu oraz weryfikacją pustych pól
+- Logowanie z obsługą błędów i przekierowaniem do głównego planera
+
+### Tworzenie planu treningowego
+- Możliwość wyboru ćwiczeń z lokalnej bazy danych
+- Wyświetlanie szczegółowego opisu ćwiczenia oraz grupy mięśni, do której należy
+- Dynamiczne dodawanie ćwiczeń do planu
+- Podgląd aktualnego planu
+- Obliczanie i wyświetlanie sumy spalonych kalorii
+
+### Eksport planu do pliku o formacie .txt
+- Możliwość zapisania gotowego planu treningowego z imieniem użytkownika i podsumowaniem
+
+---
 
 ## Instalacja i Uruchomienie
 
-### Wymagania
-- .NET SDK 8.0 lub wyższy
+### Wymagania systemowe:
 - Windows 10/11
-- (opcjonalnie) Visual Studio 2022/2023 z dodatkiem "Desktop Development with C#"
+- .NET SDK 8.0+
+- (opcjonalnie) Visual Studio 2022+ z pakietem **Desktop Development with C#**
 
-### Instrukcja instalacji:
+### Instrukcja uruchomienia:
 ```bash
 # Klonowanie repozytorium
 git clone https://github.com/Kamo452/PlannerTreningowy
 
-# Przejście do katalogu
+# Przejście do folderu
 cd PlannerTreningowy
 
-# Uruchomienie aplikacji
+# Uruchomienie (jeśli projekt jest konsolowy)
 dotnet run
 ```
 
-### Uruchomienie przez Visual Studio:
-1. Otwórz plik `.sln` (jeśli istnieje) lub `.csproj` w Visual Studio.
-2. Wybierz tryb uruchomienia jako **Windows Application**.
-3. Kliknij **Start (F5)**.
+**Alternatywnie w Visual Studio:**
+- Otwórz plik `.sln` lub `.csproj`
+- Ustaw projekt jako `Startowy`
+- Kliknij "Start" lub wciśnij `F5`
 
 ---
 
 ## Opis Architektury
-Projekt został zaprojektowany zgodnie z zasadami **programowania obiektowego**:
 
-- **Hermetyzacja:** Prywatne pola i publiczne metody dostępu.
-- **Dziedziczenie:** Klasy bazowe i klasy dziedziczne dla różnych typów ćwiczeń i planów.
-- **Polimorfizm:** Wspólny interfejs GUI dla różnych kategorii ćwiczeń.
+Projekt oparty jest na paradygmacie programowania obiektowego:
 
-
+- **Hermetyzacja**: Własności klas prywatne lub publiczne z dostępem przez get/set
+- **Dziedziczenie i interfejsy**: Klasa Cwiczenie dziedziczy po klasie abstrakcyjnej CwiczenieBase i implementuje interfejs ICwiczenie, co umożliwia elastyczność i rozbudowę projektu w przyszłości.
+- **Polimorfizm**: Realizowany jest poprzez wykorzystanie ToString() w celu  wyświetlania obiektów w ListBox
+- **Klasa Cwiczenie** odzwierciedla strukturę bazy danych (Nazwa, Grupa, Opis, Kcal)
+- **Klasa Database** zawiera metody dostępu do bazy danych
