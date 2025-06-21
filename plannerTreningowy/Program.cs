@@ -1,24 +1,13 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using System.Windows.Forms;
-
 namespace plannerTreningowy
 {
-    internal static class Program
+    static class Program
     {
-        /// <summary>
-        /// Główny punkt wejścia dla aplikacji.
-        /// </summary>
         [STAThread]
         static void Main()
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            var logowanie = new Logowanie();
-            logowanie.Show();
-            Application.Run();
+            Application.Run(new FormLogowanie());
         }
     }
 }
