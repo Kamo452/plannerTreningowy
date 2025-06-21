@@ -1,4 +1,5 @@
-﻿using System;
+﻿using plannerTreningowy;
+using System;
 using System.Data.OleDb;
 using System.Windows.Forms;
 
@@ -20,6 +21,8 @@ namespace plannerTreningowy
             {
                 MessageBox.Show($"Witaj, {imie}!");
                 Hide();
+                FormPlaner planner = new FormPlaner(imie);
+                planner.Show();
             }
             else
             {
@@ -34,3 +37,5 @@ namespace plannerTreningowy
         }
     }
 }
+// - hermetyzacja: pola są dostępne tylko przez interfejs GUI (txtLogin itp.)
+// - podział na warstwy: logika logowania przekazana do klasy Database
