@@ -45,7 +45,6 @@ W dłuższej perspektywie aplikacja może generować przychody poprzez:
 ### Wymagania systemowe:
 - Windows 10/11
 - .NET SDK 8.0+
-- (opcjonalnie) Visual Studio 2022+ z pakietem **Desktop Development with C#**
 
 ### Instrukcja uruchomienia:
 ```bash
