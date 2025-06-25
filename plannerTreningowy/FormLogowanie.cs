@@ -37,5 +37,3 @@ namespace plannerTreningowy
         }
     }
 }
-// - hermetyzacja: pola są dostępne tylko przez interfejs GUI (txtLogin itp.)
-// - podział na warstwy: logika logowania przekazana do klasy Database

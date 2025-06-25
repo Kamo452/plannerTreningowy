@@ -11,13 +11,27 @@ namespace plannerTreningowy
     {
         private string imieUzytkownika;
 
-
         public FormPlaner(string imie)
         {
             InitializeComponent();
             imieUzytkownika = imie;
             lblPowitanie.Text = $"Witaj, {imieUzytkownika}!";
+            WczytajCwiczenia();
         }
-
+        private void WczytajCwiczenia()
+        {
+            Database.WczytajCwiczeniaZBazy();
+            foreach (var c in Database.WszystkieCwiczenia)
+            {
+                lstCwiczenia.Items.Add(c);
+            }
+        }
+        private void lstCwiczenia_WyborZListy(object sender, EventArgs e)
+        {
+            if (lstCwiczenia.SelectedItem is Cwiczenie c)
+            {
+                txtOpis.Text = c.Opis;
+            }
+        }
     }
 }
