@@ -10,12 +10,11 @@ namespace plannerTreningowy
     public partial class FormPlaner : Form
     {
         private string imieUzytkownika;
-
         public FormPlaner(string imie)
         {
             InitializeComponent();
             imieUzytkownika = imie;
-            lblPowitanie.Text = $"Witaj, {imieUzytkownika}!";
+            lblPowitanie.Text = $"Witaj {imieUzytkownika}!";
             WczytajCwiczenia();
         }
         private void WczytajCwiczenia()
@@ -32,6 +31,17 @@ namespace plannerTreningowy
             {
                 txtOpis.Text = c.Opis;
             }
+        }
+        private void btnDodajCwiczenie(object sender, EventArgs e)
+        {
+            if (lstCwiczenia.SelectedItem is Cwiczenie c)
+            {
+                lstPlan.Items.Add(c);
+            }
+        }
+        private void btnUsunCwiczenie(object sender, EventArgs e)
+        {
+            lstPlan.Items.Remove(lstPlan.SelectedItem);
         }
     }
 }
