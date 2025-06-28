@@ -1,10 +1,10 @@
 ## Planer Treningowy
 
 ### Temat i Cel Biznesowy
-Aplikacja **Planer Treningowy** została stworzona w celu umożliwości użytkowikom prostego tworzenia i zarządzania planami treningowymi. Dzięki aplikacji użytkownik może zarejestrować konto, zalogować się, wybrać ćwiczenia z gotowej bazy i zbudować spersonalizowany plan treningowy. Głównym celem aplikacji jest motywowanie do aktywności fizycznej poprzez uproszczenie procesu planowania oraz monitorowanie spalonych kalorii.
+Aplikacja **PlannerTreningowy** została stworzona w celu umożliwości użytkowikom prostego tworzenia i zarządzania planami treningowymi. Dzięki aplikacji użytkownik może zarejestrować konto, zalogować się, wybrać ćwiczenia z gotowej bazy i zbudować spersonalizowany plan treningowy. Głównym celem aplikacji jest motywowanie do aktywności fizycznej poprzez uproszczenie procesu planowania oraz monitorowanie spalonych kalorii.
 Grupą docelową są osoby początkujące i średniozaawansowane, które chcą mieć pod ręką przejrzyste narzędzie do zarządzania swoim treningiem.
 
-Planer treningowy będzie wykorzystany w konkretnym modelu biznesowym:
+Plannertreningowy będzie wykorzystany w konkretnym modelu biznesowym:
 - **Model B2C (Business-to-Consumer):**  
   Aplikacja jest dostępna dla indywidualnych użytkowników jako darmowa usługa.
 
