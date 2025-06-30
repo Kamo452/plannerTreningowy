@@ -30,6 +30,7 @@ namespace plannerTreningowy
             if (lstCwiczenia.SelectedItem is Cwiczenie c)
             {
                 txtOpis.Text = c.Opis;
+                lblPartia.Text = $"Partia mięśni: {c.Grupa}";
             }
         }
         private void btnDodajCwiczenie(object sender, EventArgs e)
@@ -43,5 +44,29 @@ namespace plannerTreningowy
         {
             lstPlan.Items.Remove(lstPlan.SelectedItem);
         }
+
+        private void btnZapisz_Click(object sender, EventArgs e)
+        {
+
+            SaveFileDialog saveFileDialog = new SaveFileDialog();
+            saveFileDialog.Title = "Zapis planu treningowego | PlannerTreningowy";
+            saveFileDialog.Filter = "Pliki tekstowe (*.txt)|*.txt";
+
+            if (saveFileDialog.ShowDialog() == DialogResult.OK)
+            {
+                using (StreamWriter writer = new StreamWriter(saveFileDialog.FileName))
+                {
+                    writer.WriteLine($"Plan treningowy autorstwa {imieUzytkownika}:");
+                    writer.WriteLine();
+                    foreach (Cwiczenie cw in lstPlan.Items)
+                    {
+                        writer.WriteLine($"- {cw.Nazwa} ({cw.Kcal} kcal/serię)");
+                    }
+                    writer.WriteLine();
+                }
+                MessageBox.Show("Plan zapisano pomyślnie! \nŻyczymy udanych treningów!", "Gratulacje sportowcu!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+        }
+
     }
 }

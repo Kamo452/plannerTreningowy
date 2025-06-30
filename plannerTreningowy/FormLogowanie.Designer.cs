@@ -29,34 +29,44 @@
             logo = new PictureBox();
             ((System.ComponentModel.ISupportInitialize)logo).BeginInit();
             SuspendLayout();
-            // Napis "Login:"
+            // 
+            // lblLogin
+            // 
             lblLogin.AutoSize = true;
             lblLogin.Location = new Point(100, 170);
             lblLogin.Name = "lblLogin";
             lblLogin.Size = new Size(56, 23);
             lblLogin.TabIndex = 0;
             lblLogin.Text = "Login:";
-            // Napis "Hasło:"
+            // 
+            // lblHaslo
+            // 
             lblHaslo.AutoSize = true;
             lblHaslo.Location = new Point(100, 210);
             lblHaslo.Name = "lblHaslo";
             lblHaslo.Size = new Size(57, 23);
             lblHaslo.TabIndex = 2;
             lblHaslo.Text = "Hasło:";
-            // Formularz loginu
+            // 
+            // txtLogin
+            // 
             txtLogin.Font = new Font("Segoe UI", 10F);
             txtLogin.Location = new Point(180, 170);
             txtLogin.Name = "txtLogin";
             txtLogin.Size = new Size(200, 30);
             txtLogin.TabIndex = 1;
-            // Szyfrowany formularz hasła
+            // 
+            // txtHaslo
+            // 
             txtHaslo.Font = new Font("Segoe UI", 10F);
             txtHaslo.Location = new Point(180, 210);
             txtHaslo.Name = "txtHaslo";
             txtHaslo.Size = new Size(200, 30);
             txtHaslo.TabIndex = 3;
             txtHaslo.UseSystemPasswordChar = true;
-            // Przycisk "Zaloguj"
+            // 
+            // btnZaloguj
+            // 
             btnZaloguj.BackColor = Color.SteelBlue;
             btnZaloguj.FlatStyle = FlatStyle.Flat;
             btnZaloguj.ForeColor = Color.White;
@@ -67,8 +77,10 @@
             btnZaloguj.Text = "Zaloguj";
             btnZaloguj.UseVisualStyleBackColor = false;
             btnZaloguj.Click += btnZaloguj_Click;
-            // Przycisk "Zarejestruj"
-            btnRejestracja.BackColor = Color.Gray;
+            // 
+            // btnRejestracja
+            // 
+            btnRejestracja.BackColor = Color.DimGray;
             btnRejestracja.FlatStyle = FlatStyle.Flat;
             btnRejestracja.ForeColor = Color.White;
             btnRejestracja.Location = new Point(180, 310);
@@ -78,7 +90,9 @@
             btnRejestracja.Text = "Rejestracja";
             btnRejestracja.UseVisualStyleBackColor = false;
             btnRejestracja.Click += btnRejestracja_Click;
-            // Grafika logo naszej aplikacji (Autor Kamil Bujara)
+            // 
+            // logo
+            // 
             logo.Image = Properties.Resources.logo;
             logo.Location = new Point(89, 23);
             logo.Name = "logo";
@@ -86,7 +100,9 @@
             logo.SizeMode = PictureBoxSizeMode.StretchImage;
             logo.TabIndex = 6;
             logo.TabStop = false;
-            // Ogólne ustawienia
+            // 
+            // FormLogowanie
+            // 
             BackColor = Color.WhiteSmoke;
             ClientSize = new Size(500, 400);
             Controls.Add(lblLogin);

@@ -33,47 +33,61 @@
             logo = new PictureBox();
             ((System.ComponentModel.ISupportInitialize)logo).BeginInit();
             SuspendLayout();
-            // Napis "Imię:"
+            // 
+            // lblImie
+            // 
             lblImie.AutoSize = true;
             lblImie.Location = new Point(100, 170);
             lblImie.Name = "lblImie";
             lblImie.Size = new Size(47, 23);
             lblImie.TabIndex = 0;
             lblImie.Text = "Imię:";
-            // Napis "Login:"
+            // 
+            // lblLogin
+            // 
             lblLogin.AutoSize = true;
             lblLogin.Location = new Point(100, 210);
             lblLogin.Name = "lblLogin";
             lblLogin.Size = new Size(56, 23);
             lblLogin.TabIndex = 2;
             lblLogin.Text = "Login:";
-            // Napis "Hasło:"
+            // 
+            // lblHaslo
+            // 
             lblHaslo.AutoSize = true;
             lblHaslo.Location = new Point(100, 250);
             lblHaslo.Name = "lblHaslo";
             lblHaslo.Size = new Size(57, 23);
             lblHaslo.TabIndex = 4;
             lblHaslo.Text = "Hasło:";
-            // Formularz z imieniem
+            // 
+            // txtImie
+            // 
             txtImie.Font = new Font("Segoe UI", 10F);
             txtImie.Location = new Point(180, 170);
             txtImie.Name = "txtImie";
             txtImie.Size = new Size(200, 30);
             txtImie.TabIndex = 1;
-            // Formularz z loginem
+            // 
+            // txtLogin
+            // 
             txtLogin.Font = new Font("Segoe UI", 10F);
             txtLogin.Location = new Point(180, 210);
             txtLogin.Name = "txtLogin";
             txtLogin.Size = new Size(200, 30);
             txtLogin.TabIndex = 3;
-            // Formularz z szyfrowanym hasłęm
+            // 
+            // txtHaslo
+            // 
             txtHaslo.Font = new Font("Segoe UI", 10F);
             txtHaslo.Location = new Point(180, 250);
             txtHaslo.Name = "txtHaslo";
             txtHaslo.Size = new Size(200, 30);
             txtHaslo.TabIndex = 5;
             txtHaslo.UseSystemPasswordChar = true;
-            // Przycisk tworzący konto (kontakt z Database.cs)
+            // 
+            // btnUtworz
+            // 
             btnUtworz.BackColor = Color.ForestGreen;
             btnUtworz.FlatStyle = FlatStyle.Flat;
             btnUtworz.ForeColor = Color.White;
@@ -84,8 +98,10 @@
             btnUtworz.Text = "Utwórz konto";
             btnUtworz.UseVisualStyleBackColor = false;
             btnUtworz.Click += btnUtworz_Click;
-            // Przycisk powrotu do fofmularza logowania
-            btnPowrot.BackColor = Color.Gray;
+            // 
+            // btnPowrot
+            // 
+            btnPowrot.BackColor = Color.DimGray;
             btnPowrot.FlatStyle = FlatStyle.Flat;
             btnPowrot.ForeColor = Color.White;
             btnPowrot.Location = new Point(180, 350);
@@ -95,7 +111,9 @@
             btnPowrot.Text = "Powrót";
             btnPowrot.UseVisualStyleBackColor = false;
             btnPowrot.Click += btnPowrot_Click;
-            // logo naszej aplikacji 
+            // 
+            // logo
+            // 
             logo.Image = Properties.Resources.logo;
             logo.Location = new Point(90, 23);
             logo.Name = "logo";
@@ -103,7 +121,9 @@
             logo.SizeMode = PictureBoxSizeMode.StretchImage;
             logo.TabIndex = 8;
             logo.TabStop = false;
-            // Ogólne ustawienia
+            // 
+            // FormRejestracja
+            // 
             BackColor = Color.WhiteSmoke;
             ClientSize = new Size(500, 420);
             Controls.Add(lblImie);
