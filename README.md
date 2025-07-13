@@ -74,3 +74,8 @@ Projekt oparty jest na paradygmacie programowania obiektowego:
 - **Polimorfizm**: Realizowany jest poprzez wykorzystanie ToString() w celu  wyświetlania obiektów w ListBox
 - **Klasa Cwiczenie** odzwierciedla strukturę bazy danych (Nazwa, Grupa, Opis, Kcal)
 - **Klasa Database** zawiera metody dostępu do bazy danych
+
+---
+
+## Diagram UML
+- **Diagram klas UML** ze strukturą naszego projektu: (uml/uml.png)
