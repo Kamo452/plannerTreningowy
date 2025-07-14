@@ -40,6 +40,15 @@ W dłuższej perspektywie aplikacja może generować przychody poprzez:
 
 ---
 
+### Planowana funkcjonalność:
+- Hashowanie haseł w bazie danych
+- Przypomnienie o treningach na wybrany adres e-mail
+- Dodanie dwóch typów użytkowników - **Admin** oraz **Trener**
+- Rola **Admin** umożliwia dodawanie treningów do bazy danych
+- Rola **Trener** umożliwia kontrolę progresu klientów oraz rekomendowanie specjalnych planów
+- Kalendarz z możliwością wyboru dni treningowych
+
+---
 ## Instalacja i Uruchomienie
 
 ### Wymagania systemowe:
