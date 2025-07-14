@@ -54,8 +54,9 @@ git clone https://github.com/Kamo452/PlannerTreningowy
 # Przejście do folderu
 cd PlannerTreningowy
 
-# Uruchomienie (jeśli projekt jest konsolowy)
-dotnet run
+# Uruchomienie
+dotnet build
+dotnet run --project plannerTreningowy.csproj
 ```
 
 **Alternatywnie w Visual Studio:**
